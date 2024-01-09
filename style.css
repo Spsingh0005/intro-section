@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+}
+
+:root {
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+}
+
+
+body {
+    background-color: var(--almost-white);
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: url('./images/hand-pointer-regular.svg'), auto;
+}
+
+.nav_container {
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.nav_container>img {
+    margin-right: 3.5rem;
+    width: 70px;
+}
+
+.nav_container ul.mid-menu {
+    list-style-type: none;
+    flex: 10;
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: start;
+    height: 20px;
+}
+
+.nav_container ul.side_menu {
+    list-style-type: none;
+    flex: 10;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 20px;
+}
+
+.nav_container ul.side_menu li {
+    font-size: .8rem;
+    margin-right: 2rem;
+}
+
+.nav_container ul.mid-menu li {
+    font-size: .8rem;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    color: var(--medium-gray);
+
+    a {
+        margin-right: 2px;
+    }
+}
+
+.nav_container button.register {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--medium-gray);
+    font-size: .7rem;
+    cursor: url('./images/hand-pointer-regular.svg'), auto;
+
+
+    &:hover {
+        color: var(--almost-white);
+        background-color: var(--almost-black);
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+header nav .mid-menu .features {
+    position: relative;
+}
+
+#features_options {
+    position: absolute;
+    width: 151%;
+    top: 100%;
+    right: 0%;
+    display: none;
+
+}
+
+#features_options .f_options {
+    width: 100%;
+    padding: 10px 3px;
+    line-height: 20px;
+    font-size: .8rem;
+}
+
+#features_options .f_options li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+#features_options .f_options li img {
+    margin-right: 10px;
+    width: 12px;
+}
+
+header nav .mid-menu .company {
+    position: relative;
+}
+
+#company_options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+
+}
+
+#company_options .c_options {
+    width: max-content;
+    padding: 10px;
+    line-height: 20px;
+    font-size: .8rem;
+}
+
+#company_options .c_options li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+
+/* header end */
+/* main start */
+
+main .container {
+    width: 90%;
+    margin: auto;
+    height: 90vh;
+    display: flex;
+
+
+}
+
+main .container .hero-text {
+    width: 60%;
+
+    padding: 150px 0 0 120px;
+    height: 100%;
+
+}
+
+main .container .hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+
+    span {
+        display: block;
+    }
+}
+
+main .container .hero-text p {
+    font-size: .9rem;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--medium-gray);
+    margin-bottom: 1.5rem;
+    width: 65%;
+}
+
+main .container .hero-text .learn_more {
+    padding: 13px;
+    border-radius: 10px 10px;
+    border: .5px solid var(--medium-gray);
+    background-color: var(--almost-black);
+    color: var(--almost-white);
+    font-size: .8rem;
+    margin-bottom: 6rem;
+    cursor: url('./images/hand-pointer-regular.svg'), auto;
+
+
+    &:hover {
+        color: var(--almost-black);
+        background-color: var(--almost-white);
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+main .container .hero-text .companies {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    img {
+        margin-right: 2rem;
+        width: 4rem;
+
+    }
+}
+
+main .container .hero-image {
+    width: 50%;
+}
+
+main .container .hero-image img {
+    width: 70%;
+    padding-top: 50px;
+}
+
+.attribution {
+
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* main code end */
+
+
+/* header side-nav */
+header .side-nav {
+    display: none;
+}
+
+header .hamburger-icon {
+    display: none;
+}
+
+header .logo {
+    display: none;
+}
+
+
+/* media query start under 768px */
+@media only screen and (max-width:768px) {
+    .nav_container {
+        justify-content: flex-start;
+    }
+
+    .nav_container ul.mid-menu li a {
+        display: flex;
+        align-items: center;
+    }
+
+    main .container {
+        height: auto;
+    }
+
+    main .container .hero-text {
+        padding: 50px 0 0 0px;
+        width: 50%;
+    }
+
+    main .container .hero-image {
+        width: 50%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    main .container .hero-text .learn_more {
+        margin-bottom: 1rem;
+    }
+
+    main .container .hero-text .companies img {
+        margin-right: 2rem;
+        width: 3rem;
+    }
+}
+
+/* media query start under 425px */
+
+
+@media only screen and (max-width:425px) {
+    .nav_container {
+        display: none;
+    }
+
+    header .logo {
+        display: block;
+        position: fixed;
+        top: 2%;
+        left: 2%;
+        width: 4rem;
+    }
+
+
+    /* hamburger icon */
+    header .hamburger-icon {
+        display: block;
+        height: 3px;
+        width: 30px;
+        background-color: var(--almost-black);
+        position: fixed;
+        top: 3%;
+        right: 5%;
+
+        &::before {
+            content: '';
+            height: 3px;
+            width: 30px;
+            background-color: var(--almost-black);
+            top: 200%;
+            position: absolute;
+        }
+
+        &::after {
+            content: '';
+            height: 3px;
+            width: 30px;
+            background-color: var(--almost-black);
+            top: -200%;
+            position: absolute;
+        }
+
+    }
+
+    /* side nav styling */
+    header .side-nav {
+        background-color: var(--almost-white);
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 20px;
+        height: 100%;
+        width: 60%;
+        display: none;
+        transition: all 0.5s ease;
+        z-index: 999;
+        transform: translateX(100%);
+
+        ul {
+            list-style-type: none;
+        }
+    }
+
+    header .side-nav.slide {
+        background-color: blue;
+    }
+
+    header .side-nav .cross img {
+        display: block;
+        margin-left: auto;
+        margin-bottom: 1rem;
+    }
+
+    #side_features_options,
+    #side_company_options {
+        display: none;
+        margin: 10px 0 10px;
+        padding-left: 20px;
+    }
+
+    .side-nav-ul {
+        font-size: 1.3rem;
+    }
+
+    .side-nav-ul li {
+        margin-bottom: 1rem;
+    }
+
+    .side-nav-ul li a img {
+        margin-left: 0.5rem;
+        width: 10px;
+    }
+
+    .side_nav_menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .side_nav_menu li {
+        margin-bottom: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .side_nav_menu li a {
+        font-size: 1.5rem;
+
+    }
+
+    .side_nav_menu li .register {
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid var(--medium-gray);
+        font-size: 1.1rem;
+        cursor: url('./images/hand-pointer-regular.svg'), auto;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+
+        &:hover {
+            color: var(--almost-white);
+            background-color: var(--almost-black);
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    main .container {
+        flex-direction: column;
+        width: 100%;
+        padding: 0.5rem;
+        align-items: center;
+    }
+
+    main .container .hero-text {
+        order: 2;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .container .hero-text h1 {
+        font-size: 2rem;
+        text-align: center;
+
+        span {
+            display: inline;
+        }
+    }
+
+    main .container .hero-text p {
+        font-size: 1.1rem;
+        line-height: 25px;
+        width: 100%;
+        text-align: center;
+    }
+
+    main .container .hero-text .learn_more {
+        font-size: 1rem;
+        width: 50%;
+        margin-bottom: 0 auto 2rem;
+    }
+
+    main .container .hero-image {
+        order: 1;
+        width: 100%;
+    }
+
+    main .container .hero-image img {
+        width: 100%;
+
+    }
+
+    main .container .companies {
+        align-items: center;
+        margin: 0 auto 2rem;
+        justify-content: center;
+
+
+    }
+
+    main .container .hero-text .companies img {
+        width: 4rem;
+    }
+}
